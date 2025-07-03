@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVibe - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h2>Loading CryptoVibe</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CryptoVibe</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="post-generator.html">Post Generator</a>
+                <a href="crypto-insights.html">Crypto Insights</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="container" class="container-hidden">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Empower Your Crypto Journey</h1>
+                <p>Generate engaging social media posts and gain deep crypto insights with CryptoVibe's cutting-edge tools.</p>
+                <div class="hero-ctas">
+                    <a href="post-generator.html" class="cta-btn">Generate Posts</a>
+                    <a href="crypto-insights.html" class="cta-btn secondary">Explore Insights</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-svg">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="cryptoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0461dc;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3b86f7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="200" cy="200" r="150" fill="url(#cryptoGradient)" opacity="0.1"/>
+                        <circle cx="200" cy="200" r="100" fill="url(#cryptoGradient)" opacity="0.2"/>
+                        <circle cx="200" cy="200" r="60" fill="url(#cryptoGradient)" opacity="0.3"/>
+                        <text x="200" y="210" text-anchor="middle" font-family="Orbitron" font-size="40" font-weight="bold" fill="url(#cryptoGradient)">₿</text>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <section class="crypto-history">
+            <h2>Crypto Evolution</h2>
+            <p>The cryptocurrency landscape has transformed the financial world, from the inception of Bitcoin to the explosive growth of decentralized ecosystems. Explore the pivotal moments that have defined this revolutionary journey.</p><br><br>
+            <div class="history-grid">
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fab fa-bitcoin" style="color: #f7931a; font-size: 3rem;"></i>
+                    </div>
+                    <h3>Bitcoin's Birth (2009)</h3>
+                    <p>In 2009, Satoshi Nakamoto introduced Bitcoin, the world's first decentralized cryptocurrency. With its groundbreaking blockchain technology, Bitcoin offered a trustless, peer-to-peer system, challenging traditional financial institutions and sparking a global movement toward financial sovereignty.</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fas fa-chart-line" style="color: #00d4aa; font-size: 3rem;"></i>
+                    </div>
+                    <h3>DeFi Emergence (2018)</h3>
+                    <p>Decentralized Finance (DeFi) exploded onto the scene around 2018, leveraging Ethereum's smart contracts to create permissionless financial systems. Protocols like Uniswap and Compound enabled lending, borrowing, and trading without intermediaries, redefining how we interact with money.</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fab fa-ethereum" style="color: #627eea; font-size: 3rem;"></i>
+                    </div>
+                    <h3>Ethereum's Launch (2015)</h3>
+                    <p>Vitalik Buterin's Ethereum launched in 2015, introducing smart contracts that enabled programmable money. This innovation paved the way for decentralized applications (DApps), laying the foundation for DeFi, NFTs, and the broader Web3 ecosystem.</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fas fa-image" style="color: #e91e63; font-size: 3rem;"></i>
+                    </div>
+                    <h3>Rise of NFTs (2021)</h3>
+                    <p>Non-Fungible Tokens (NFTs) took the world by storm in 2021, enabling digital ownership of art, music, and collectibles on the blockchain. Projects like CryptoPunks and Bored Ape Yacht Club showcased the power of tokenizing unique assets, blending culture with technology.</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fas fa-coins" style="color: #26a17b; font-size: 3rem;"></i>
+                    </div>
+                    <h3>Stablecoin Growth (2017)</h3>
+                    <p>Stablecoins like Tether (USDT) and USD Coin (USDC) emerged around 2017, offering price stability by pegging to fiat currencies. These tokens bridged the gap between volatile cryptocurrencies and traditional finance, enabling seamless transactions and DeFi integration.</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon">
+                        <i class="fas fa-globe" style="color: #ff6b6b; font-size: 3rem;"></i>
+                    </div>
+                    <h3>Web3 Vision (2020)</h3>
+                    <p>The concept of Web3 gained traction around 2020, envisioning a decentralized internet powered by blockchain. With user-owned data and decentralized platforms, Web3 aims to shift control from tech giants to individuals, fostering a new era of digital innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Built by Skye: <a href="https://codewithskye.github.io" target="_blank">codewithskye.github.io</a></p>
+            <p>© 2025 CryptoVibe. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

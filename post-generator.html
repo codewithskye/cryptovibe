@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVibe - Post Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h2>Loading CryptoVibe</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CryptoVibe</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="post-generator.html" class="active">Post Generator</a>
+                <a href="crypto-insights.html">Crypto Insights</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container hidden" id="container">
+        <div class="greeting" id="greeting">
+            <h1 id="greetingText" class="gradient-text"></h1>
+        </div><br><br>
+        
+        <div class="mode-selection" id="modeSelection">
+            <h2>Choose Post Type</h2>
+            <p>Select how you want to generate your posts:</p>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="randomPostType" name="postType" value="random">
+                    <label for="randomPostType">Random Posts</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="profilePostType" name="postType" value="profile">
+                    <label for="profilePostType">Profile-Based Posts</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section hidden" id="randomPostForm">
+            <h3><i class="fas fa-edit"></i> Random Post Generator</h3><br>
+            <div class="form-group">
+                <label for="postContent">Post Content Idea <span class="required">*</span></label>
+                <textarea id="postContent" placeholder="Enter your post idea (e.g., 'Bitcoin reaching new highs', 'DeFi farming strategies', etc.)" required></textarea>
+                <div class="char-counter">
+                    <span id="contentCharCount">0</span>/500
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Include Hashtags? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="randomHashtagsYes" name="randomHashtags" value="yes">
+                        <label for="randomHashtagsYes">Yes</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="randomHashtagsNo" name="randomHashtags" value="no">
+                        <label for="randomHashtagsNo">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Post Length <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="longPost" name="postLength" value="long">
+                        <label for="longPost">Long (200+ chars)</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="shortPost" name="postLength" value="short">
+                        <label for="shortPost">Short (< 200 chars)</label>
+                    </div>
+                </div>
+            </div>
+            <button class="generate-btn" id="generateRandomBtn">
+                <i class="fas fa-magic"></i> Generate Random Posts
+            </button>
+        </div>
+
+        <div class="form-section hidden" id="profileForm">
+            <h3><i class="fas fa-user-circle"></i> Profile Details</h3><br>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="xInput">X Username or Profile URL <span class="required">*</span></label>
+                    <input type="text" id="xInput" placeholder="@username or https://x.com/username" required>
+                    <div class="input-hint">
+                        <i class="fas fa-info-circle"></i> Enter a public X/Twitter username or profile URL
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry/Niche <span class="required">*</span></label>
+                    <select id="industry">
+                        <option value="" disabled selected>Select an industry</option>
+                        <option value="defi">DeFi</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="airdrop">Airdrop</option>
+                        <option value="nft">NFTs</option>
+                        <option value="blockchain">Blockchain</option>
+                        <option value="trading">Trading</option>
+                        <option value="web3">Web3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="toneStyle">Tone Style <span class="required">*</span></label>
+                <select id="toneStyle">
+                    <option value="" disabled selected>Select a tone</option>
+                    <option value="hype">Hype & Exciting</option>
+                    <option value="professional">Professional</option>
+                    <option value="casual">Casual & Friendly</option>
+                    <option value="technical">Technical</option>
+                    <option value="educational">Educational</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label>Content Types <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="announcement">
+                        <label for="announcement">Airdrop Announcements</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="education">
+                        <label for="education">Crypto Education</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="market">
+                        <label for="market">Market Insights</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="community">
+                        <label for="community">Community Engagement</label>
+                    </div>
+                </div>
+            </div><br>
+            <div class="form-group">
+                <label>Include Hashtags? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="hashtagsYes" name="hashtags" value="yes">
+                        <label for="hashtagsYes">Yes</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="hashtagsNo" name="hashtags" value="no">
+                        <label for="hashtagsNo">No</label>
+                    </div>
+                </div>
+            </div><br>
+            <button class="generate-btn" id="generateProfileBtn">
+                <i class="fas fa-magic"></i> Generate Profile Posts
+            </button>
+        </div>
+
+        <div class="loading hidden" id="loading">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p id="loadingText">Generating your posts...</p>
+        </div>
+
+        <div class="error hidden" id="error">
+            <div class="error-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorText"></span>
+            </div>
+        </div>
+
+        <div class="results hidden" id="results">
+            <div class="profile-summary hidden" id="profileSummary">
+                <h3><i class="fas fa-user-circle"></i> Profile Analysis</h3>
+                <div id="profileInfo"></div>
+            </div>
+            
+            <div class="results-section hidden" id="randomResults">
+                <h3><i class="fas fa-scroll"></i> Generated Posts</h3>
+                <div id="randomPosts"></div>
+            </div>
+            
+            <div class="results-section hidden" id="profileResults">
+                <h3><i class="fas fa-scroll"></i> Long Posts (3 samples)</h3>
+                <div id="longPosts"></div>
+                <h3><i class="fas fa-bolt"></i> Short Posts (3 samples)</h3>
+                <div id="shortPosts"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Built by Skye: <a href="https://codewithskye.github.io" target="_blank">codewithskye.github.io</a></p>
+        <p>© 2025 CryptoVibe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

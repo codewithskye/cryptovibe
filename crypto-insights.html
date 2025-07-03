@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVibe - Crypto Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h2>Loading CryptoVibe</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CryptoVibe</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links">
+                <a href="post-generator.html">Post Generator</a>
+                <a href="crypto-insights.html" class="active">Crypto Insights</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="container" class="container-hidden">
+        <div class="content-card">
+            <section class="crypto-chart">
+                <h2><i class="fas fa-chart-line"></i> Real-Time Crypto Insights</h2>
+                <p>Track the latest market trends with our interactive chart powered by TradingView.</p>
+                <div id="tradingview_widget"></div>
+            </section>
+
+            <section class="coming-soon">
+                <h2><i class="fas fa-rocket"></i> More Insights Coming Soon</h2>
+                <p>Stay tuned for advanced analytics, market predictions, and personalized crypto insights!</p>
+                <div class="coming-soon-features">
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-Powered Analysis</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-crystal-ball"></i>
+                        <span>Market Predictions</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Personalized Insights</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>Built by Skye: <a href="https://codewithskye.github.io" target="_blank">codewithskye.github.io</a></p>
+            <p>© 2025 CryptoVibe. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
